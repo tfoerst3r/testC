@@ -1,0 +1,57 @@
+---
+
+zammad_ticket_number: 56131
+ticket_link: https://support.hifis.net/#ticket/zoom/131
+project_name: Earth Systems Modelling-Stability of gas hydrates
+project_website: https://earth.google.com/web/
+client_other_resources:
+  - https://github.com/google/earthenterprise
+consultants:
+  - name: Wile E. Coyote
+    affiliation: Acme Corp., Germany
+  - name: Road Runner
+    affiliation: Acme Corp., Germany
+experts: []
+clients:
+  - name: Max Mustermann
+    affiliation: Hauptstrasse, Germany
+used_consultation_roles:
+  - Technical domain
+  - Tool
+start_date: 2020-12-03
+end_date: 2021-06-22
+survey_sent: 1
+estimated_workload: 3
+final_workload: 4
+workload_percentage_distribution:
+  communication: 25
+  preparation: 0
+  teaching: 0
+  execution: 60
+  decision: 5
+  other: 10
+internal_consulting_resources:
+  - https://gitlab.hzdr.de/hifis/consulting/gas-hydrates
+tags:
+  - Python
+  - Parallelizing
+  - Multiprocessing
+request_types:
+  - Code audit
+communication_platforms:
+  - BBB
+used_technologies:
+  - Python
+  - GitLab
+used_consulting_resources: []
+other_identified_problems:
+  - Missing VCS knowledge
+  - Poor code structure
+  - No Exception handling
+  - No logging
+remarks: The request initially was to expedite the python code execution time leveraging the full use of all the CPU
+  cores in the clients VM-based HPC machine. As part of the consulting, we introduced, previously non-existent version
+  control (GitLab) to the client's code and converted the existing Python code of version 2.7 to >3.6. We then cleaned
+  up the code with logging and exception handling and finally accelerated the code using the Multiprocessing API from
+  Python. Later while deployment, we also fixed some environment issues in the clients HPC system for a smooth run
+  of the new code.

@@ -1,0 +1,84 @@
+# Structured Consultations Report
+
+# Please use this template to report
+# information about a consultation.
+
+# The following example can be copied and modified to one's needs.
+---
+
+zammad_ticket_number: 4223
+ticket_link: https://support.hifis.net/#ticket/zoom/4223
+project_name: Awesome Software Project
+project_website: https://awesome_website_project.de
+client_other_resources:
+  - https://gitlab.com/awesome_project_code
+consultants:
+  - name: firstname surname
+    affiliation: DKFZ
+  - name: firstname surname
+    affiliation: DLR
+experts:
+  - name: firstname surname
+    affiliation: GFZ
+  - name: firstname surname
+    affiliation: DLR
+clients:
+  - name: firstname surname
+    affiliation: HZDR
+  - name: firstname surname
+    affiliation: AWI
+used_consultation_roles:
+  - Technical domain
+  - Tool
+  - Scientific domain
+  - Organisation
+start_date: 2021-01-01
+end_date: 2021-02-01
+survey_sent: 0
+estimated_workload: 3
+final_workload: 4
+workload_percentage_distribution:
+  communication: 40
+  preparation: 10
+  teaching: 0
+  execution: 50
+  decision: 0
+  other: 0
+internal_consulting_resources:
+  - https://gitlab.hzdr.de/hifis/consulting/project_recommendations
+tags:
+  - tag_1
+  - tag_2
+  - tag_3
+request_types:
+  - Qualification
+  - Requirements Management
+  - Software Architecture
+  - Change Management
+  - Design and Implementation
+  - Software Test
+  - Release Management
+  - Automation and Dependency Management
+  - Software or programming language migration
+  - Code audit
+  - Technology and Tool recommendations
+  - Infrastructure support
+  - Licenses
+  - Open Source
+  - Patent
+  - Contract suggestions
+communication_platforms:
+  - Mattermost
+  - Slack
+used_technologies:
+  - yaml
+  - Markdown
+  - GitLab
+used_consulting_resources:
+  - https://hifis.pages.hzdr.de/consulting/hifis-consulting-handbook/resources/
+  - https://c4models.com
+  - https://hifis.net/events/2021/06/08/lets_make_your_script_ready_for_publication
+other_identified_problems:
+  - Missing VCS knowledge
+  - no conclusive project architecure
+remarks: Free text can be written here.

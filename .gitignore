@@ -1,0 +1,9 @@
+## IDEs, Editors
+.idea/
+
+## Operating Systems
+.DS_Store
+*.sw?
+
+## Folders
+code/plots/*

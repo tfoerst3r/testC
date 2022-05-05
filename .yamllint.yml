@@ -1,0 +1,10 @@
+---
+
+extends: default
+locale: en_US.UTF-8
+
+rules:
+  line-length:
+    max: 120
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true

@@ -1,0 +1,22 @@
+---
+stages:
+  - lint
+
+lint:
+  stage: lint
+  image:
+    name: cytopia/yamllint
+    entrypoint: ["/bin/ash", "-c"]
+  script:
+    - yamllint -f colored .
+
+validate:
+  stage: lint
+  image: python:3.9
+  before_script:
+    - pip install -r requirements-ci.txt
+  script:
+    - >
+        python templates/validate.py
+        --schema-file templates/consultation-report.schema.json
+        reports/*.yml templates/structured_report_template.yml

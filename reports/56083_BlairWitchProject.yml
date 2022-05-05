@@ -1,0 +1,79 @@
+# Structured Report for the SimFuel Platform project
+---
+
+zammad_ticket_number: 56083
+ticket_link: https://support.hifis.net/#ticket/zoom/83
+project_name: Blair Witch Project
+project_website: https://en.wikipedia.org/wiki/The_Blair_Witch_Project
+client_other_resources:
+  - https://gitlab.de/The_Blair_Witch_Project
+consultants:
+  - name: Wile E. Coyote
+    affiliation: Acme Corp., Germany
+experts: []
+clients:
+  - name: Road Runner
+    affiliation: Advent Corp., Worcestershire
+used_consultation_roles:
+  - Technical domain
+  - Tool
+  - Organisation
+start_date: 2020-10-07
+end_date: 2021-04-27
+survey_sent: 2
+estimated_workload: 3
+final_workload: 4
+workload_percentage_distribution:
+  communication: 60
+  preparation: 10
+  teaching: 0
+  execution: 25
+  decision: 5
+  other: 0
+internal_consulting_resources:
+  - https://gitlab.hzdr.de/hifis/consulting/witchcraft-recommendations
+tags:
+  - MongoDB
+  - dash
+  - plotly
+  - JSON
+  - Documentation
+  - Sustainability
+  - Python
+  - Onboarding
+  - Outsourcing development tasks
+request_types:
+  - Software Test
+  - Change Management
+  - Automation and Dependency Management
+  - Software Architecture
+  - Contract suggestions
+communication_platforms:
+  - BBB
+  - Jitsi
+  - phone call
+used_technologies:
+  - GitLab
+used_consulting_resources:
+  - https://arc42.de/
+  - https://arc42.org/
+  - https://www.embarc.de/img/spicker/Architektur-Spicker1_Architekturueberblick.pdf
+  - https://de.wikipedia.org/wiki/ISO/IEC_9126
+  - https://about.gitlab.com/topics/version-control/what-is-gitlab-workflow/
+  - https://pep8.org/
+  - https://realpython.com/python-pep8/
+  - https://martinfowler.com/testing/
+  - https://rse.dlr.de/
+  - https://www.sphinx-doc.org/en/master/
+  - https://www.remotemobprogramming.org/
+other_identified_problems:
+  - Missing concept for software architecture
+  - Missing concepts and rules for collaborative development
+  - No unit tests
+  - Only overall tool testing with test data
+  - Little too no automation
+  - Less time for continously development
+remarks: The team were aware of most problems and challenges.
+  The mostly missed guideance on how to approach the problems and challenges.
+  Therefore, the main part of the consultation was to workout a step-by-step
+  process towards a sustainable software project.

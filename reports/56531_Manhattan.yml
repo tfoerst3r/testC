@@ -1,0 +1,46 @@
+# Structured Report for the nnDetection consultation
+---
+
+zammad_ticket_number: 56531
+ticket_link: https://support.hifis.net/#ticket/zoom/531
+project_name: Manhattan Project
+project_website: https://en.wikipedia.org/wiki/Manhattan_Project
+client_other_resources:
+  - https://github.com/ManhattanProject
+consultants:
+  - name: Wile E. Coyote
+    affiliation: Acme Corp., Germany
+experts: []
+clients:
+  - name: John Doe
+    affiliation: Jujubi Corp., Germany
+used_consultation_roles:
+  - Technical domain
+start_date: 2021-07-01
+end_date: 2021-07-07
+survey_sent: 1
+estimated_workload: 1
+final_workload: 2
+workload_percentage_distribution:
+  communication: 70
+  preparation: 30
+  teaching: 0
+  execution: 0
+  decision: 0
+  other: 0
+internal_consulting_resources: []
+tags: []
+request_types:
+  - Licenses
+communication_platforms:
+  - BBB
+used_technologies: []
+used_consulting_resources:
+  - https://gitlab.com/hifis/hifis-workshops/make-your-code-ready-for-publication/workshop-materials/-/tree/master/slides
+  - https://gitlab.com/hifis/hifis-workshops/make-your-code-ready-for-publication/astronaut-analysis
+other_identified_problems:
+  - Missing knowledge about oss licenses
+  - Missing documentation of dependencies
+remarks: Specific open source licence consulting. The requestor specific questions regarding usage of external code
+  snippets and libraries as well as relicensing. Additionally to the license specific questions, advice regarding the
+  publishment of software was given.

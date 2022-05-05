@@ -1,0 +1,234 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://www.hifis.net/consultation-report.schema.json",
+    "title": "Consulting Report",
+    "description": "A report about a consulting of the HIFIS Software team",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "zammad_ticket_number": {
+            "description": "The numeric ticket number from the HIFIS Helpdesk.",
+            "type": "integer"
+        },
+        "ticket_link": {
+            "description": "The consulting ticket URL",
+            "$ref": "#/definitions/zammadUrl"
+        },
+        "project_name": {
+            "description": "The consulting ticket title as written by the client.",
+            "type": "string"
+        },
+        "project_website": {
+            "description": "External website describing the client's project, if any.",
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/generalUrl"
+                },
+                {
+                    "type": "string",
+                    "length": 0
+                }
+            ]
+        },
+        "client_other_resources": {
+            "type": "array",
+            "description": "Directly relevant project material shared to us by the client. For eg. Gitlab repo of the project.",
+            "items": {
+                "$ref": "#/definitions/generalUrl"
+            }
+        },
+        "consultants": {
+            "type": "array",
+            "description": "List of consultants involved in the consultation",
+            "items": {
+                "$ref": "#/definitions/person"
+            }
+        },
+        "experts": {
+            "type": "array",
+            "description": "List of experts involved in the consultation",
+            "items": {
+                "$ref": "#/definitions/person"
+            }
+        },
+        "clients": {
+            "type": "array",
+            "description": "List of clients participating in the consultation",
+            "items": {
+                "$ref": "#/definitions/person"
+            }
+        },
+        "used_consultation_roles": {
+            "type": "array",
+            "description": "List of roles required by the consultation and covered by a consultant.",
+            "items": {
+                "$ref": "#/definitions/consultation_roles"
+            }
+        },
+        "estimated_workload": {
+            "description": "Estimated workload given in days until the request will be finished.",
+            "type": "number"
+        },
+        "final_workload": {
+            "description": "Approximated final workload given in days after the request was closed.",
+            "type": "number"
+        },
+        "workload_percentage_distribution": {
+            "description": "Approximated distribution of workflow in percentage.",
+            "type": "object",
+            "properties": {
+                "communication": {
+                    "description": "Calls, mail, etc.",
+                    "type": "integer"
+                },
+                "preparation": {
+                    "description": "Reading up, learning a new tool, etc.",
+                    "type": "integer"
+                },
+                "teaching": {
+                    "description": "Trainings, presentations, etc.",
+                    "type": "integer"
+                },
+                "execution": {
+                    "description": "Coding, etc.",
+                    "type": "integer"
+                },
+                "decision": {
+                    "description": "Thinking",
+                    "type": "integer"
+                },
+                "other": {
+                    "description": "Unexpected further tasks",
+                    "type": "integer"
+                }
+            }
+        },
+        "internal_consulting_resources": {
+            "type": "array",
+            "description": "List of URLs to the consulting resources created as part of the consultation.",
+            "items": {
+                "$ref": "#/definitions/generalUrl"
+            }
+        },
+        "tags": {
+            "type": "array",
+            "description": "Keywords of technology/tools/concepts involved in the consultation.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "request_types": {
+            "type": "array",
+            "description": "List of consulting types as per the consulting handbook.",
+            "items": {
+                "$ref": "#/definitions/request_types"
+            }
+        },
+        "communication_platforms": {
+            "type": "array",
+            "description": "Used means of communication to client other than the HIFIS Helpdesk.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "used_technologies": {
+            "type": "array",
+            "description": "List of technologies/tools used by the consultant to cater the request.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "used_consulting_resources": {
+            "type": "array",
+            "description": "List of URLs to the existing resources reused for the consultation.",
+            "items": {
+                "$ref": "#/definitions/generalUrl"
+            }
+        },
+        "start_date": {
+            "description": "Filing date of the ticket as per ISO 8601 Data elements and interchange formats. (yyyy-mm-dd)",
+            "type": "string",
+            "format": "data"
+        },
+        "end_date": {
+            "description": "Date of closure as per ISO 8601 Data elements and interchange formats. (yyyy-mm-dd)",
+            "type": "string",
+            "format": "date"
+        },
+        "survey_sent": {
+            "description": "Indicates that a survey was sent. Valid values are positive integers and zero. In case it was decided not to sent a survey, the selected value is 0.",
+            "type": "integer"
+        },
+        "other_identified_problems": {
+            "type": "array",
+            "description": "List of other issues identified by the consultant in addition to the main consulting request.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "remarks": {
+            "description": "Free text describing the consulting story.",
+            "type": "string"
+        }
+    },
+    "definitions": {
+        "generalUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+        },
+        "zammadUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https:\/\/support\\.hifis\\.net\/#ticket\/zoom/\\d+$"
+        },
+        "person": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "affiliation": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "affiliation"
+            ]
+        },
+        "consultation_roles": {
+            "type": "string",
+            "pattern": "^(?i)(Technical domain|Tool|Scientific domain|Organisation)$"
+        },
+        "request_types": {
+            "type": "string",
+            "pattern": "^(?i)(Qualification|Requirements Management|Software Architecture|Change Management|Design and Implementation|Software Test|Release Management|Automation and Dependency Management|Software or programming language migration|Code audit|Technology and Tool recommendations|Infrastructure support|Licenses|Open Source|Patent|Contract suggestions|)$"
+        }
+    },
+    "required": [
+        "zammad_ticket_number",
+        "ticket_link",
+        "project_name",
+        "project_website",
+        "client_other_resources",
+        "consultants",
+        "experts",
+        "clients",
+        "used_consultation_roles",
+        "start_date",
+        "end_date",
+        "survey_sent",
+        "estimated_workload",
+        "final_workload",
+        "workload_percentage_distribution",
+        "internal_consulting_resources",
+        "tags",
+        "request_types",
+        "communication_platforms",
+        "used_technologies",
+        "used_consulting_resources",
+        "other_identified_problems",
+        "remarks"
+    ]
+}
