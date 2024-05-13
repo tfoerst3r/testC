@@ -14,7 +14,7 @@ About 20 fields are supposed to be filled by a consultant for the report creatio
 1. **expert_centers**: Institute(s) of the HIFIS/non-HIFIS expert(s) involved, respectively.
 1. **client_names**: Name(s) of the clients involved.
 1. **client_centers**: Institute(s) of the client(s) involved, respectively.
-1. **used_consultation_roles**: List of roles required by the consulation and covered by an consultant. Remove those not applicable for the consultation.
+1. **used_consultation_roles**: List of roles required by the consultation and covered by an consultant. Remove those not applicable for the consultation.
     1. **Technical domain**: Knowledge about a technical topic, i.e. Testing.
     1. **Tool**: Knowledge about a certain tool, i.e. Gitlab.
     1. **Scientific domain**: Knowledge about the application domain of the software (not IT).
@@ -33,15 +33,41 @@ About 20 fields are supposed to be filled by a consultant for the report creatio
     1. **other**: Unexpected further tasks
 1. **internal_consulting_resources**: URL(s) to the consulting resources created as part the consultation.
 1. **tags**: Keywords of technology/tools/concepts involved in the consultation.
-1. **request_types**: Consulting type(s) as per the consulting handbook.
+1. **request_types**: Consulting type(s) as per the [consulting handbook](https://hifis.net/consulting-handbook/consulting_guide/#consulting-types).
 1. **communication_platforms**: Used means of communication to client other than the HIFIS Helpdesk.
 1. **used_technologies**: Technologies/tools used by the consultant to cater the request.
 1. **used_consulting_resources**: URL(s) to the existing resources reused for the consultation.
 1. **other_identified_problems**: Other issue(s) identified by the consultant in addition to the main consulting request.
 1. **remarks**: Free text describing the consulting story.
 
-## Fill-in hints
-* **Leave attributes empty if no value** - Use only keys without a following space after the colon to indicate an empty attributes.
-* **No empty attribute lists** - Use `[]` to indicate empty attribute lists.  
-* **No trailing spaces** - No spaces behind an attribute.
-* **No long lines** - Add line breaks. If you do so, ensure you line does not end with a space.
+# Fill-in hints
+
+**If field not required**
+
+- **Remove empty attributes or empty lists**
+
+**If field is required**
+
+- **Leave attributes empty if no value** - Use only keys without a following space after the colon to indicate an empty attributes.
+- **Leave empty attributes with double quotes**  - Use `""`
+- **No empty attribute lists** - Use `[]` to indicate empty attribute lists.  
+- **No trailing spaces** - No spaces behind an attribute.
+- **No long lines** - Add line breaks. If you do so, ensure you line does not end with a space.
+
+**List of required fields:**
+
+- `zammad_ticket_number`
+- `ticket_link`
+- `project_name`
+- `consultants`
+- `clients`
+- `start_date`
+- `end_date`
+- `survey_sent`
+- `estimated_workload`
+- `final_workload`
+- `workload_percentage_distribution`
+- `tags`
+- `request_types`
+- `communication_platforms`
+
