@@ -32,5 +32,5 @@ publish:
     - poetry config repositories.gitlab "$POETRY_REPOSITORY"
     - poetry config http-basic.gitlab gitlab-ci-token "$CI_JOB_TOKEN"
     - poetry publish --repository gitlab
-  only:
-    - tags
+#  only:
+#    - tags
