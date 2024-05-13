@@ -1,8 +1,13 @@
 image: python:3.12
 
 stages:
+  - publish
   - lint
   - validate
+
+variables:
+  # Set the registry URL based on your GitLab project ID
+  POETRY_REPOSITORY: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi"
 
 before_script:
   - pip install --upgrade pip
@@ -18,3 +23,14 @@ validate:
   stage: validate
   script:
     - poetry run reporting validate
+
+
+publish:
+  stage: build
+  script:
+    - poetry build
+    - poetry config repositories.gitlab "$POETRY_REPOSITORY"
+    - poetry config http-basic.gitlab gitlab-ci-token "$CI_JOB_TOKEN"
+    - poetry publish --repository gitlab
+  only:
+    - tags
