@@ -148,7 +148,7 @@
         "start_date": {
             "description": "Filing date of the ticket as per ISO 8601 Data elements and interchange formats. (yyyy-mm-dd)",
             "type": "string",
-            "format": "data"
+            "format": "date"
         },
         "end_date": {
             "description": "Date of closure as per ISO 8601 Data elements and interchange formats. (yyyy-mm-dd)",
@@ -199,36 +199,27 @@
         },
         "consultation_roles": {
             "type": "string",
-            "pattern": "^(?i)(Technical domain|Tool|Scientific domain|Organisation)$"
+            "pattern": "(?i)(Technical domain|Tool|Scientific domain|Organisation)$"
         },
         "request_types": {
             "type": "string",
-            "pattern": "^(?i)(Qualification|Requirements Management|Software Architecture|Change Management|Design and Implementation|Software Test|Release Management|Automation and Dependency Management|Software or programming language migration|Code audit|Technology and Tool recommendations|Infrastructure support|Licenses|Open Source|Patent|Contract suggestions|)$"
+            "pattern": "(?i)(Qualification|Requirements Management|Software Architecture|Change Management|Design and Implementation|Software Test|Release Management|Automation and Dependency Management|Software or programming language migration|Code audit|Technology and Tool recommendations|Infrastructure support|Licenses|Open Source|Patent|Contract suggestions|)$"
         }
     },
     "required": [
         "zammad_ticket_number",
         "ticket_link",
         "project_name",
-        "project_website",
-        "client_other_resources",
         "consultants",
-        "experts",
         "clients",
-        "used_consultation_roles",
         "start_date",
         "end_date",
         "survey_sent",
         "estimated_workload",
         "final_workload",
         "workload_percentage_distribution",
-        "internal_consulting_resources",
         "tags",
         "request_types",
-        "communication_platforms",
-        "used_technologies",
-        "used_consulting_resources",
-        "other_identified_problems",
-        "remarks"
+        "communication_platforms"
     ]
 }

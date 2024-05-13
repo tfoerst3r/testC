@@ -1,9 +1,25 @@
-## IDEs, Editors
+#== IDEs, Editors
 .idea/
 
-## Operating Systems
+#== Operating Systems
 .DS_Store
 *.sw?
 
-## Folders
+#== Folders
 code/plots/*
+evaluation/*
+
+#== Environments
+.venv
+.ipynb_checkpoints/
+__pycache__/
+
+#== Reporting
+*.html
+
+#== data
+results-survey.csv
+
+#== pyenv
+.python-version
+

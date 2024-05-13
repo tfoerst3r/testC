@@ -1,22 +1,20 @@
----
+image: python:3.12
+
 stages:
   - lint
+  - validate
+
+before_script:
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install --only main
 
 lint:
   stage: lint
-  image:
-    name: cytopia/yamllint
-    entrypoint: ["/bin/ash", "-c"]
   script:
-    - yamllint -f colored .
+    - poetry run reporting lint
 
 validate:
-  stage: lint
-  image: python:3.9
-  before_script:
-    - pip install -r requirements-ci.txt
+  stage: validate
   script:
-    - >
-        python templates/validate.py
-        --schema-file templates/consultation-report.schema.json
-        reports/*.yml templates/structured_report_template.yml
+    - poetry run reporting validate
