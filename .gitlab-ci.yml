@@ -26,7 +26,7 @@ validate:
 
 
 publish:
-  stage: build
+  stage: publish
   script:
     - poetry build
     - poetry config repositories.gitlab "$POETRY_REPOSITORY"
