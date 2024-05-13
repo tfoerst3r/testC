@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "Consulting Reporting"
+name = "Consulting_Reporting"
 version = "3.1.0"
 description = "HIFIS Consulting Reporting"
 authors = ["Your Name <you@example.com>"]
