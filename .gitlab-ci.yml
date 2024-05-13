@@ -31,6 +31,6 @@ publish:
     - poetry config repositories.gitlab ${POETRY_REPOSITORY}
     - poetry config --list
     - poetry config http-basic.gitlab gitlab-ci-token ${CI_JOB_TOKEN}
-    - poetry publish --build --repository gitlab
+    - poetry publish --build --username tfoerst1 --password glpat-8cyuzffx2spnFG-yxCzh --repository gitlab
 #  only:
 #    - tags
