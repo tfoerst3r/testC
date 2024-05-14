@@ -27,6 +27,7 @@ ipython = "^8.23.0"
 pandas-stubs = "^2.2.1.240316"
 types-jsonschema = "^4.21.0.20240331"
 types-pyyaml = "^6.0.12.20240311"
+black = "^24.4.2"
 
 [tool.poetry.group.gui.dependencies]
 streamlit = "^1.33.0"
