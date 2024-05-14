@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Consulting_Reporting"
-version = "3.1.2"
+version = "3.1.3"
 description = "HIFIS Consulting Reporting"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
