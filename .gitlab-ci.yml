@@ -30,10 +30,7 @@ publish:
   script:
     - poetry build --format wheel
     - poetry config repositories.gitlab ${POETRY_REPOSITORY}
-    - poetry config --list
-      #    - poetry config http-basic.gitlab gitlab-ci-token ${CI_JOB_TOKEN}
     - poetry publish --username gitlab-ci-token --password ${CI_JOB_TOKEN} --repository gitlab
-      #    - poetry publish --username tfoerst1 --password glpat-1ybtPLTy1cHW38Ji3aGb --repository gitlab
+  only:
+    - tags
 
-#  only:
-#    - tags
