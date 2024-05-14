@@ -8,6 +8,7 @@
 #== Folders
 code/plots/*
 evaluation/*
+dist/*
 
 #== Environments
 .venv

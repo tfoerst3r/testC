@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "reporting"
+        },
+        {
+            "name": "PyDebug: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [],
+            "justMyCode": true
+        },
+        {
+            "name": "PyDebug: Main File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "args": [],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "consulting_reports",
+            "justMyCode": true,
+            "args": [
+                "--help"
+            ]
+        }
+    ]
+}

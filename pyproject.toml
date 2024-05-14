@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Consulting_Reporting"
-version = "3.1.0"
+version = "3.1.1"
 description = "HIFIS Consulting Reporting"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
@@ -10,7 +10,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-reporting="src.cr_cli.__main__:app"
+reporting="cr_cli.__main__:app"
 
 [tool.poetry.dependencies]
 python = "^3.12"
