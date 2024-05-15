@@ -9,7 +9,7 @@ def create_html_report():
     Launches web ui to fill in a consultation report
     """
 
-    command = ["streamlit", "run", "./src/cr_gui/_ui_create.py"]
+    command = ["streamlit", "run", "./src/cr_gui/ui_create.py"]
     with subprocess.Popen(command) as proc:
         try:
             proc.wait()
